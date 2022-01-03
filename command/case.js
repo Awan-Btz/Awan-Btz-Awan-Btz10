@@ -577,10 +577,10 @@ case 'ytmp4':
                 })
                 break
 //lagu
-	case 'lemon':
-		hem =fs.readFileSync('./lagu/AUD-20220103-WA1053.mp3');
-		haruka.sendMessage(from, hem, messageType.audio, {quoted: mek, mimetype: 'audio/mp4',ptt:true})
-		break
+case 'lemon':
+		       hem =fs.readFileSync('./lagu/AUD-20220103-WA1053.mp3');
+		       haruka.sendMessage(from, hem, messageType.audio, {quoted: mek, mimetype:'audio/mp4',ptt:true})
+		       break
 //group
 case 'leave':
 			if (!isGroup) return reply(lang.group())
