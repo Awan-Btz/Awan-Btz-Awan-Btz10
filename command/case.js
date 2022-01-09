@@ -395,7 +395,29 @@ case 'sticker':case 'stiker':case 'stickergif':case 'stikergif':case 'sgif':case
 								reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim\nDurasi sticker video 1-9 detik...`)
 							}
 					break
-					
+
+// lagu
+case 'lemon':
+doing = fs.readFileSync('./heheboy/lemon.mp3')
+haruka.sendMessage(from,doing,MessageType.audio, {quoted: mek, mimetype:'audio/mp4',ppt:true})
+break
+
+case 'opblackclover10':
+doing = fs.readFileSync('./heheboy/opbc10.mp3')
+haruka.sendMessage(from,doing,MessageType.audio, {quoted: mek, mimetype:'audio/mp4',ppt:true})
+break
+
+case 'opblends':
+doing = fs.readFileSync('./heheboy/blends.mp3')
+haruka.sendMessage(from,doing,MessageType.audio, {quoted: mek, mimetype:'audio/mp4',ppt:true})
+break
+
+case 'whereveryouwouldcallme':
+doing = fs.readFileSync('./heheboy/Wherever.mp3')
+haruka.sendMessage(from,doing,MessageType.audio, {quoted: mek, mimetype:'audio/mp4',ppt:true})
+break
+			    
+
 // download fix by zeeone
 case 'ig': case 'igdl': 
 	if (!q) return reply('Linknya?')
