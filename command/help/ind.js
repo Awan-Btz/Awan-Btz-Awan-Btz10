@@ -31,8 +31,7 @@ exports.welcome = () =>{
 ┊🌻┊╰─❒Bekerja/pelajar= 
 ┊🥀┊╰─❒Niat masuk grup= 
 ╰─❀ TOLONG PATUHI RULES!!🐣✨
-:ཻུ۪۪────────────────╯*
-✧ ⃟ ⃟ ━━━ೋ๑୨۝୧๑ೋ━━━ ⃟ ⃟ ✧`
+:ཻུ۪۪────────────────╯*`
       }
 exports.leave = () =>{
 	return`
@@ -45,6 +44,12 @@ exports.menu = (prefix, salam, pushname) =>{
 ╭─⬣ *List Menu*
 │ • ${prefix}menu
 │ • ${prefix}help
+│
+├ *Lagu*
+│ • ${prefix}lemon
+│ • ${prefix}${prefix}opblackclover10
+│ • ${prefix}whereveryouwouldcallme
+│ • ${prefix}opblends
 │
 ├ *Download*
 │ • ${prefix}play [query]
