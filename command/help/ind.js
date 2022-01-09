@@ -47,7 +47,7 @@ exports.menu = (prefix, salam, pushname) =>{
 │
 ├ *Lagu*
 │ • ${prefix}lemon
-│ • ${prefix}${prefix}opblackclover10
+│ • ${prefix}opblackclover10
 │ • ${prefix}whereveryouwouldcallme
 │ • ${prefix}opblends
 │
