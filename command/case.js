@@ -443,10 +443,10 @@ case 'ig': case 'igdl':
 case 'anims':
 		if(!q) return reply('Masukkan query')
 		reply('Sabar ya kak....')
-		anu = await fetchJson('https://api.lolhuman.xyz/api/${body.slice(7)}?apikey=e1030fba5817c23dda67d0d3&query=gotoubun%20no%20hanayome', {method:'get'})
-		buffer = await getBuffer(anu.result.coverImage)
 		teks = 'ANIME SEARCH\n• Title : ${anu.result.title}\n• Format : ${anu.result.format}\n• Upload : ${anu.result.seasonYear}\n• Duration : ${anu.result.duration}\n• Status: ${anu.result.status} \n• Episodes : ${anu.result.episodes}\n• Season : ${anu.result.season}\n• Source : ${anu.result.source}\n• Genres : ${anu.result.genres}\n• description: ${anu.result.description}\n• Characters : ${anu.result.characters}`
-		haruka.sendMessage(from,buffer,MessageType.image, {quoted:mek, caption: 'teks'})
+		anu = await fetchJson('https://api.lolhuman.xyz/api/${body.slice(7)}?apikey=e1030fba5817c23dda67d0d3&query=gotoubun%20no%20hanayome', {method:'get'})
+		buffer = await getBuffer(anu.result.coverImage.medium)
+		haruka.sendMessage(from,buffer,image, {quoted:mek,caption: 'teks'})
 		await limitAdd(sender)
 		break
 case 'tiktok':
@@ -611,11 +611,6 @@ case 'ytmp4':
                     reply(lang.err())
                 })
                 break
-//lagu
-case 'lemon':
-hem = fs.readFileSync('lagu/AUD-20220103-WA1053.mp3')
-haruka.sendMessage(from, sound, MessageType.audio, {quoted: mem, mimetype: 'audio/mp4', ptt:true})
-break
 //group
 case 'leave':
 			if (!isGroup) return reply(lang.group())
