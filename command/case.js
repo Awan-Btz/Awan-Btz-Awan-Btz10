@@ -443,10 +443,10 @@ case 'ig': case 'igdl':
 case 'anims':
 		if(!q) return reply('Masukkan query')
 		reply('Sabar ya kak....')
-		teks = 'ANIME SEARCH\n• Title : ${anu.result.title}\n• Format : ${anu.result.format}\n• Upload : ${anu.result.seasonYear}\n• Duration : ${anu.result.duration}\n• Status: ${anu.result.status} \n• Episodes : ${anu.result.episodes}\n• Season : ${anu.result.season}\n• Source : ${anu.result.source}\n• Genres : ${anu.result.genres}\n• description: ${anu.result.description}\n• Characters : ${anu.result.characters}`
 		anu = await fetchJson('https://api.lolhuman.xyz/api/${body.slice(7)}?apikey=e1030fba5817c23dda67d0d3&query=gotoubun%20no%20hanayome', {method:'get'})
 		buffer = await getBuffer(anu.result.coverImage.medium)
-		haruka.sendMediaURL(from,buffer,image, {quoted:mek,caption: 'teks'})
+		haruka.sendMessage(from,buffer,image, {quoted:mek,caption: 'ANIME SEARCH\n• Title : ${anu.result.title}\n• Format : ${anu.result.format}\n• Upload : ${anu.result.seasonYear}\n• Duration : ${anu.result.duration}\n• Status: ${anu.result.status} \n• Episodes : ${anu.result.episodes}\n• Season : ${anu.result.season}\n• Source : ${anu.result.source}\n• Genres : ${anu.result.genres}\n• description: ${anu.result.description}\n• Characters : ${anu.result.characters}`
+'})
 		await limitAdd(sender)
 		break
 case 'tiktok':
