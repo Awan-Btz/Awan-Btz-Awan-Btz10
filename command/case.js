@@ -440,15 +440,6 @@ case 'ig': case 'igdl':
             }
             }).catch((err) => reply(`🤲 Server eror`))
             break
-case 'anims':
-		if(!q) return reply('Masukkan query')
-		reply('Sabar ya kak....')
-		anu = await fetchJson('https://api.lolhuman.xyz/api/${body.slice(7)}?apikey=e1030fba5817c23dda67d0d3&query=gotoubun%20no%20hanayome', {method:'get'})
-		buffer = await getBuffer(anu.result.coverImage.medium)
-		teks = 'ANIME SEARCH\n• Title: ${anu.result.title}\n• Format: ${anu.result.format}\n• Upload : ${anu.result.seasonYear}\n• Duration : ${anu.result.duration}\n• Status: ${anu.result.status} \n• Episodes : ${anu.result.episodes}\n• Season : ${anu.result.season}\n• Source : ${anu.result.source}\n• Genres : ${anu.result.genres}\n• description: ${anu.result.description}\n• Characters : ${anu.result.characters}`
-		haruka.sendMessage(from,buffer,image,{quoted: mek,caption: `teks'})
-		await limitAdd(sender)
-		break
 case 'tiktok':
 sendButLocation(from, 'Silahkan pilih media yang ingin kamu download', '© ' + ownername, thumbnail, [{buttonId: `.tiktokwm ${q}`, buttonText: {displayText: 'WM'}, type: 1},{buttonId: `.tiktoknowm ${q}`, buttonText:{displayText: 'NOWM'}, type: 1},{buttonId: `.tiktokmusic ${q}`, buttonText:{displayText: 'AUDIO'}, type: 1}], {quoted: mek})
 						break
