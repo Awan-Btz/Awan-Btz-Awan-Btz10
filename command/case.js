@@ -445,19 +445,18 @@ case 'anims':
 		reply('Sabar ya kak....')
 		anu = await fetchJson('https://api.lolhuman.xyz/api/${body.slice(7)}?apikey=e1030fba5817c23dda67d0d3&query=gotoubun%20no%20hanayome', {method:'get'})
 		buffer = await getBuffer(anu.result.coverImage)
-		teks = '*---- 「 ANIME SEARCH 」----*
-						
-• Title : ${anu.result.title}
-• Format : ${anu.result.format}
-• Upload : ${anu.result.seasonYear}
-• Duration : ${anu.result.duration}
-• Status: ${anu.result.status} 
-• Episodes : ${anu.result.episodes}
-• Season : ${anu.result.season}
-• Source : ${anu.result.source}
-• Genres : ${anu.result.genres}
-• description: ${anu.result.description} 
-• Characters : ${anu.result.characters}`
+		teks = '        ANIME SEARCH
+		• Title : ${anu.result.title}
+		• Format : ${anu.result.format}
+		• Upload : ${anu.result.seasonYear}
+		• Duration : ${anu.result.duration}
+		• Status: ${anu.result.status} 
+		• Episodes : ${anu.result.episodes}
+		• Season : ${anu.result.season}
+		• Source : ${anu.result.source}
+		• Genres : ${anu.result.genres}
+		• description: ${anu.result.description} 
+		• Characters : ${anu.result.characters}`
 		haruka.sendMessage(from,buffer,MessageType.image, {quoted:mek, caption: teks})
 		await limitAdd(sender)
 		break
