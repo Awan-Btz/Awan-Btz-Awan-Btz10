@@ -324,7 +324,7 @@ case 'menu': case 'help': case 'haruka':
 				sendButLocation(from, lang.menu(prefix, salam, pushname), '© ' + ownername, thumbnail, [{buttonId: '.owner', buttonText: {displayText: 'Owner'}, type: 1},{buttonId: '.infobot', buttonText:{displayText: 'Infobot'}, type: 1}], {quoted: mek})
 				break
 case 'infobot':
-reply('Update bot selanjutnya silahkan cek YouTube zeeone ofc')
+reply('Donasi ya biar semangat')
 break
 case 'owner':{
 		const ownerContact = [ownernumber, "", "", "", "", "", "", "", "", "", "" , "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
@@ -440,13 +440,26 @@ case 'ig': case 'igdl':
             }
             }).catch((err) => reply(`🤲 Server eror`))
             break
+				txt = 
 case 'anims':
 		if(!q) return reply('Masukkan query')
-		txt = body.slice(7)
-		anu = await fetchJson('https://api.lolhuman.xyz/api/anime?apikey=e1030fba5817c23dda67d0d3&query=gotoubun%20no%20hanayome', {method:'get'})
 		reply('Sabar ya kak....')
-		buffer = await getBuffer(anu.result.url)
-		haruka.sendMessage(from,buffer,MessageType.image, {quoted:mek})
+		anu = await fetchJson('https://api.lolhuman.xyz/api/${body.slice(7)}?apikey=e1030fba5817c23dda67d0d3&query=gotoubun%20no%20hanayome', {method:'get'})
+		buffer = await getBuffer(anu.result.coverImage)
+		teks = '*---- 「 ANIME SEARCH 」----*
+						
+• Title : ${anu.result.title}
+• Format : ${anu.result.format}
+• Upload : ${anu.result.seasonYear}
+• Duration : ${anu.result.duration}
+• Status: ${anu.result.status} 
+• Episodes : ${anu.result.episodes}
+• Season : ${anu.result.season}
+• Source : ${anu.result.source}
+• Genres : ${anu.result.genres}
+• description: ${anu.result.description} 
+• Characters : ${anu.result.characters}`
+		haruka.sendMessage(from,buffer,MessageType.image, {quoted:mek, caption: teks})
 		await limitAdd(sender)
 		break
 case 'tiktok':
