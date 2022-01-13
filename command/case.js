@@ -416,7 +416,11 @@ case 'whereveryouwouldcallme':
 doing = fs.readFileSync('./heheboy/Wherever.mp3')
 haruka.sendMessage(from,doing,MessageType.audio, {quoted: mek, mimetype:'audio/mp4',ppt:true})
 break
-			    
+
+// asal aja
+	case 'kiryuus':
+		anu = await fetchJson('http://zekais-api.herokuapp.com/kiryuu?query=demon&apikey=OL2GGKAM', {method:'get'})
+		
 
 // download fix by zeeone
 case 'ig': case 'igdl': 
@@ -436,6 +440,15 @@ case 'ig': case 'igdl':
             }
             }).catch((err) => reply(`🤲 Server eror`))
             break
+case 'anims':
+		if(!q) return reply('Masukkan query')
+		txt = body.slice(7)
+		anu = await fetchJson('https://api.lolhuman.xyz/api/anime?apikey=e1030fba5817c23dda67d0d3&query=gotoubun%20no%20hanayome', {method:'get'})
+		reply('Sabar ya kak....')
+		buffer = await getBuffer(anu.result.url)
+		haruka.sendMessage(from,buffer,MessageType.image, {quoted:mek})
+		await limitAdd(sender)
+		break
 case 'tiktok':
 sendButLocation(from, 'Silahkan pilih media yang ingin kamu download', '© ' + ownername, thumbnail, [{buttonId: `.tiktokwm ${q}`, buttonText: {displayText: 'WM'}, type: 1},{buttonId: `.tiktoknowm ${q}`, buttonText:{displayText: 'NOWM'}, type: 1},{buttonId: `.tiktokmusic ${q}`, buttonText:{displayText: 'AUDIO'}, type: 1}], {quoted: mek})
 						break
