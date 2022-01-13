@@ -440,7 +440,6 @@ case 'ig': case 'igdl':
             }
             }).catch((err) => reply(`🤲 Server eror`))
             break
-				txt = 
 case 'anims':
 		if(!q) return reply('Masukkan query')
 		reply('Sabar ya kak....')
