@@ -1,0 +1,11 @@
+{
+	"ownername":"SeanChan",
+	"ownernumber":"62895411143170",
+	"botname":"Sean-Bot",
+	"thumbnail":"./settings/sean.jpg",
+	"limit": {
+		"free":50,
+		"premium":9000
+	},
+	"session_name":"./settings/sean.json"
+}
