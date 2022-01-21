@@ -145,7 +145,7 @@ const salam = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
 						let ppmem2 = await getBuffer(ppmem)
 						let ppgc2 = await getBuffer(ppgc)
 						let gakloo = [{
-										"buttonId": `.owner`,
+										"buttonId": `.lemon`,
 										"buttonText": {
 											"displayText": "Welcome 👋"
 											},
@@ -859,6 +859,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 case 'kick':
 if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button Untuk Verify`, [{buttonId: '.daftar',buttonText: {displayText: `Daftar`,},type: 1,}], {quoted: fgif});
 			if (!isGroup) return reply(lang.group())
+		        if (!isOwner) return reply(lang.owner(botname))
 			if (!isGroupAdmins) return reply(lang.admin(groupName))
 			if (!isBotGroupAdmins) return reply(lang.adminB())
 			if(!q)return reply(`*Format salah!*\n\n*Example : ${prefix + command} @tag*`)
